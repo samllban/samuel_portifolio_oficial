@@ -1,0 +1,46 @@
+{
+  "name": "samuel_portifolio_oficial",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@cloudinary/react": "^1.14.1",
+    "@cloudinary/url-gen": "^1.21.0",
+    "@nextui-org/react": "^2.6.11",
+    "@react-firebase/database": "^0.3.11",
+    "@tabler/icons-react": "^3.31.0",
+    "@tailwindcss/cli": "^4.0.16",
+    "clsx": "^2.1.1",
+    "firebase": "^11.5.0",
+    "framer-motion": "^12.6.2",
+    "gsap": "^3.12.7",
+    "lucide-react": "^0.485.0",
+    "motion": "^12.6.2",
+    "next": "15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-dropzone": "^14.3.8",
+    "react-firebase-hooks": "^5.1.1",
+    "react-icons": "^5.5.0",
+    "swiper": "^11.2.6",
+    "swiper-react": "^1.0.0",
+    "tailwind-merge": "^3.1.0",
+    "typed.js": "^2.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.0.16",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.2.4",
+    "tailwindcss": "^4.0.16",
+    "typescript": "^5"
+  }
+}
