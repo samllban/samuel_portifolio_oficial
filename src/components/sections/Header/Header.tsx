@@ -47,26 +47,23 @@ export default function Header() {
     }, [tl]);
 
     return (
-        <div className="relative z-10 w-screen min-h-[600px]">
+        <div className="flex w-screen min-h-screen items-center justify-center ">
             {/* NavBar fixo no topo */}
             <div className="fixed top-0 p-4">
                 <NavBar />
             </div>
             {/* Conteúdo principal */}
-            <div className="mx-auto mt-20 w-full  max-w-7xl p-4 pt-16 md:pt-20 text-center space-y-6 md:space-y-8">
+            <div className="mx-auto mt-20 w-full max-w-7xl p-4 pt-16 md:pt-20 text-center space-y-6 md:space-y-8">
                 <h1 className="titleSamuel bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-5xl font-bold text-transparent md:text-8xl tracking-normal">
                     Samuel Bandeira
                 </h1>
-
                 <p className="buttonVamos bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-lg md:text-xl lg:text-2xl xl:text-4xl text-transparent font-light flex justify-center items-center gap-2 tracking-normal">
                     Desenvolvedor{" "}
                     <span ref={el} lang="en" className="font-semibold"></span>
                 </p>
-
                 <p className="tituloSite mx-auto mt-6 max-w-lg text-center text-base font-normal text-neutral-300 tracking-normal">
-                    Sites que engajam e impulsionam seu negócio para o próximo nível
+                    Sites que engajam e impulsionam seu negócio para o próximo nível!
                 </p>
-
                 <div className="pt-4">
                     <Link
                         href="/contato"

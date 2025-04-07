@@ -97,8 +97,9 @@ export default function Contato() {
         <>
             <Background>
                 <NavBar />
+                
                 <section className="mx-auto w-full max-w-7xl px-4 py-16 md:py-24 lg:py-32">
-                    <div className="flex flex-col md:flex-row md:items-start gap-8 lg:gap-12">
+                    <div className="flex flex-col md:flex-row md:items-start gap-8 lg:gap-12 pt-32">
                         {/* Formulário à esquerda */}
                         <div className="w-full md:w-1/2">
                             <div className="relative h-full rounded-xl border border-gray-800 p-2 md:p-3">
@@ -183,7 +184,7 @@ export default function Contato() {
                                     href="https://wa.me/message/D7SMXDK5YXAOA1"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="relative z-10 bg-black bg-opacity-60 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:bg-gray-800 transition-all duration-300 block text-gray-300 hover:scale-[1.02]"
+                                    className="relative z-10 bg-black bg-opacity-60 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:bg-gray-900 transition-all duration-300 block text-gray-300 hover:scale-[1.02]"
                                 >
                                     <div className="flex flex-col items-start">
                                         <FaWhatsapp size={48} className="text-green-500 mb-4" />
@@ -206,7 +207,7 @@ export default function Contato() {
                                     href="mailto:samuelalves2142@gmail.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="relative z-10 bg-black bg-opacity-60 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:bg-gray-800 transition-all duration-300 block text-gray-300 hover:scale-[1.02]"
+                                    className="relative z-10 bg-black bg-opacity-60 backdrop-blur-sm rounded-xl shadow-lg p-8 hover:bg-gray-900 transition-all duration-300 block text-gray-300 hover:scale-[1.02]"
                                 >
                                     <div className="flex flex-col items-start">
                                         <FaEnvelope size={48} className="text-blue-500 mb-4" />

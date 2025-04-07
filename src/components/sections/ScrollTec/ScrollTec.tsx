@@ -20,7 +20,7 @@ const icons = [
 ];
 
 const TechIcon = ({ src, alt }: { src: string; alt: string }) => (
-    <div className="w-[70px] h-[70px] flex justify-center items-center">
+    <div className="w-[60px] h-[60px] flex justify-center items-center">
         <Image
             src={src}
             alt={alt}
@@ -36,8 +36,8 @@ export default function ScrollTec() {
     return (
         <div className="w-full h-[300px] bg-transparent">
             <Swiper
-                slidesPerView={3}
-                spaceBetween={10}
+                slidesPerView={4}
+                spaceBetween={9}
                 loop={true}
                 autoplay={{
                     delay: 0,
@@ -46,7 +46,7 @@ export default function ScrollTec() {
                 speed={3000}
                 modules={[Autoplay]}
                 breakpoints={{
-                    640: { slidesPerView: 4 },
+                    640: { slidesPerView: 6 },
                     768: { slidesPerView: 5 },
                     1024: { slidesPerView: 6 },
                 }}

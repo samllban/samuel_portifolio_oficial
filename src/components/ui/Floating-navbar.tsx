@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import type { JSX } from "react"
 import {
     motion,
     AnimatePresence,
@@ -13,7 +12,6 @@ import Link from "next/link";
 interface NavItem {
     name: string;
     link: string;
-    icon?: JSX.Element;
 }
 
 interface FloatingNavProps {
@@ -67,8 +65,7 @@ export const FloatingNav = ({
                             "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
                         )}
                     >
-                        <span className="block sm:hidden">{navItem.icon}</span>
-                        <span className="hidden sm:block text-sm">{navItem.name}</span>
+                        <span className="text-sm">{navItem.name}</span>
                     </Link>
                 ))}
                 <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
