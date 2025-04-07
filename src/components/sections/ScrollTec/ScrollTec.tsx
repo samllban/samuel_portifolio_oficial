@@ -34,7 +34,7 @@ const TechIcon = ({ src, alt }: { src: string; alt: string }) => (
 
 export default function ScrollTec() {
     return (
-        <div className="w-full h-[300px] bg-transparent">
+        <div className="w-full bg-transparent">
             <Swiper
                 slidesPerView={4}
                 spaceBetween={9}

@@ -64,7 +64,7 @@ export default function SobrePage() {
                                     quality={85} // Qualidade otimizada (1-100)
                                     priority={false} // Lazy loading
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-xl"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-xl group-hover:scale-105 transition-transform duration-500"></div>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef } from "react";
-import NavBar from "@/components/navigation/NavBar";
+
 import gsap from "gsap";
 import Typed from "typed.js";
 import Link from 'next/link';
@@ -48,12 +48,8 @@ export default function Header() {
 
     return (
         <div className="flex w-screen min-h-screen items-center justify-center ">
-            {/* NavBar fixo no topo */}
-            <div className="fixed top-0 p-4">
-                <NavBar />
-            </div>
             {/* Conteúdo principal */}
-            <div className="mx-auto mt-20 w-full max-w-7xl p-4 pt-16 md:pt-20 text-center space-y-6 md:space-y-8">
+            <div className=" max-w-7xl mx-auto mt-20 w-full max-w-7xl p-4 pt-16 md:pt-20 text-center space-y-6 md:space-y-8">
                 <h1 className="titleSamuel bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-5xl font-bold text-transparent md:text-8xl tracking-normal">
                     Samuel Bandeira
                 </h1>
