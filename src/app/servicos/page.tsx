@@ -66,14 +66,10 @@ export default function Servicos() {
                     </div>
                 </div>
             </div>
-
             <Footer />
         </Background>
-
     );
 }
-
-
 
 interface GridItemProps {
     area: string;

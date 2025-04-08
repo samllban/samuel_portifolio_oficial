@@ -84,9 +84,7 @@ export default function SobrePage() {
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </Background>
     );
 }
