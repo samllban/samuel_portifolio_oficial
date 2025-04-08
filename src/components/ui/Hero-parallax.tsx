@@ -110,7 +110,7 @@ export const Header = () => {
             </h1>
             <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
                 Construo websites e interfaces que não apenas impressionam visualmente,
-                mas também entregam resultados mensuráveis. Cada projeto é desenvolvido
+                mas também entregam resultados. Cada projeto é desenvolvido
                 com as melhores práticas de UI/UX, performance e tecnologia moderna.
             </p>
         </div>

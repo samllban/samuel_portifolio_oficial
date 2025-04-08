@@ -6,6 +6,7 @@ import Footer from "@/components/sections/Footer/Footer";
 import HeroParallaxDemo from "@/components/sections/HeroParallax/HeroParallax";
 import NavBar from "@/components/navigation/NavBar";
 import Background from "@/components/Background/Background";
+import { AppleCardsCarouselDemo } from "@/components/sections/AppleCardsCarousel/AppleCardsCarousel";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       </div>
       <Background>
         <HeroParallaxDemo />
+        <AppleCardsCarouselDemo />
         <Footer />
       </Background>
     </>
