@@ -279,7 +279,6 @@ export const BlurImage = ({
     ...rest
 }: ImageProps) => {
     const [isLoading, setLoading] = useState(true);
-    
     return (
         <Image
             className={cn(
@@ -287,8 +286,6 @@ export const BlurImage = ({
                 isLoading ? "blur-sm" : "blur-0",
                 className
             )}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            quality={85}
             onLoad={() => setLoading(false)}
             src={src}
             width={width}

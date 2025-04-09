@@ -147,8 +147,7 @@ export const ProductCard = ({
                     fill
                     className="object-cover object-left-top"
                     alt={product.title}
-                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 55vw, 30vw"
-                    quality={85}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
             </Link>
             <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
