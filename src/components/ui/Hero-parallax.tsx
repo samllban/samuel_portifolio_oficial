@@ -68,7 +68,7 @@ export const HeroParallax = ({
                     translateY,
                     opacity,
                 }}
-                className="relative" // Adicionei z-index maior
+                className="relative" 
             >
                 <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
                     {firstRow.map((product) => (
@@ -88,7 +88,7 @@ export const HeroParallax = ({
                         />
                     ))}
                 </motion.div>
-                <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 pb-40"> {/* Adicionei padding-bottom */}
+                <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 pb-40">
                     {thirdRow.map((product) => (
                         <ProductCard
                             product={product}
@@ -105,10 +105,10 @@ export const HeroParallax = ({
 export const Header = () => {
     return (
         <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 z-30"> {/* Aumentei o z-index */}
-            <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
+            <h1 className="text-2xl md:text-7xl font-bold text-white">
                 Transformando ideias em <br />experiências digitais memoráveis
             </h1>
-            <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
+            <p className="max-w-2xl text-base md:text-xl mt-8 text-gray-200">
                 Construo websites e interfaces que não apenas impressionam visualmente,
                 mas também entregam resultados. Cada projeto é desenvolvido
                 com as melhores práticas de UI/UX, performance e tecnologia moderna.

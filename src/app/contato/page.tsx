@@ -188,8 +188,8 @@ export default function Contato() {
                                 >
                                     <div className="flex flex-col items-start">
                                         <FaWhatsapp size={48} className="text-green-500 mb-4" />
-                                        <h5 className="text-2xl font-semibold mb-2">Fale comigo no WhatsApp</h5>
-                                        <p className="text-lg">(88) 9 9256-6905</p>
+                                        <h3 className="text-2xl font-semibold mb-2">Fale comigo no WhatsApp</h3>
+                                        <h4 className="text-lg">(88) 9 9256-6905</h4>
                                     </div>
                                 </a>
                             </div>
@@ -211,8 +211,8 @@ export default function Contato() {
                                 >
                                     <div className="flex flex-col items-start">
                                         <FaEnvelope size={48} className="text-blue-500 mb-4" />
-                                        <h5 className="text-2xl font-semibold mb-2">Mande um e-mail</h5>
-                                        <p className="text-lg">samuelalves2142@gmail.com</p>
+                                        <h3 className="text-2xl font-semibold mb-2">Mande um e-mail</h3>
+                                        <h4 className="text-lg">samuelalves2142@gmail.com</h4>
                                     </div>
                                 </a>
                             </div>
