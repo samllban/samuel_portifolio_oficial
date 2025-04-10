@@ -11,7 +11,7 @@ export const metadata = {
     title: "Samuel Bandeira - Portfólio Profissional",
     description: "Desenvolvedor Full Stack especializado em React e Next.js",
     type: "website",
-    url: "https://seusite.com",
+    url: "https://samuelbandeiradev.netlify.app/",
   },
 };
 
@@ -36,7 +36,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={process.env.NODE_ENV === 'development'}
+      >
         <LoadingProvider>
           {children}
         </LoadingProvider>
