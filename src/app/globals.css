@@ -25,9 +25,3 @@
     transform: translate(-50%, -40%) scale(1);
   }
 }
-
-/* Adicione ao seu CSS global */
-:focus {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}

@@ -22,7 +22,6 @@ export default function NavBar() {
     ];
     return (
         <>
-            
             <div className="relative  w-full">
                 <FloatingNav navItems={navItems} />
             </div>
