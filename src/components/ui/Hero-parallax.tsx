@@ -6,16 +6,14 @@ import {
     useTransform,
     useSpring,
     MotionValue,
-} from "motion/react";
+} from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 export const HeroParallax = ({
     products,
 }: {
     products: {
         title: string;
-        link: string;
         thumbnail: string;
     }[];
 }) => {
@@ -23,6 +21,7 @@ export const HeroParallax = ({
     const secondRow = products.slice(5, 10);
     const thirdRow = products.slice(10, 15);
     const ref = React.useRef(null);
+
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start start", "end start"],
@@ -51,14 +50,14 @@ export const HeroParallax = ({
         springConfig
     );
     const translateY = useSpring(
-        useTransform(scrollYProgress, [0, 0.2], [-400, 400]), // Reduzi a amplitude para evitar clipping
+        useTransform(scrollYProgress, [0, 0.2], [-400, 400]),
         springConfig
     );
 
     return (
         <div
             ref={ref}
-            className= "min-h-[100vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+            className="min-h-[100vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
         >
             <Header />
             <motion.div
@@ -68,34 +67,57 @@ export const HeroParallax = ({
                     translateY,
                     opacity,
                 }}
-                className="relative" 
+                className="relative"
             >
-                <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-                    {firstRow.map((product) => (
-                        <ProductCard
-                            product={product}
-                            translate={translateX}
-                            key={product.title}
-                        />
-                    ))}
+                {/* First Row */}
+                <motion.div className="cursor-grab active:cursor-grabbing">
+                    <motion.div
+                        drag="x"
+                        dragConstraints={{ left: -1000, right: 0 }}
+                        className="flex flex-row-reverse space-x-reverse space-x-10 mb-10"
+                    >
+                        {firstRow.map((product) => (
+                            <ProductCard
+                                product={product}
+                                translate={translateX}
+                                key={product.title}
+                            />
+                        ))}
+                    </motion.div>
                 </motion.div>
-                <motion.div className="flex flex-row mb-20 space-x-20">
-                    {secondRow.map((product) => (
-                        <ProductCard
-                            product={product}
-                            translate={translateXReverse}
-                            key={product.title}
-                        />
-                    ))}
+
+                {/* Second Row */}
+                <motion.div className="overflow-hidden cursor-grab active:cursor-grabbing">
+                    <motion.div
+                        drag="x"
+                        dragConstraints={{ left: -1000, right: 0 }}
+                        className="flex flex-row space-x-10 mb-10"
+                    >
+                        {secondRow.map((product) => (
+                            <ProductCard
+                                product={product}
+                                translate={translateXReverse}
+                                key={product.title}
+                            />
+                        ))}
+                    </motion.div>
                 </motion.div>
-                <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 pb-40">
-                    {thirdRow.map((product) => (
-                        <ProductCard
-                            product={product}
-                            translate={translateX}
-                            key={product.title}
-                        />
-                    ))}
+
+                {/* Third Row */}
+                <motion.div className="overflow-hidden cursor-grab active:cursor-grabbing">
+                    <motion.div
+                        drag="x"
+                        dragConstraints={{ left: -1000, right: 0 }}
+                        className="flex flex-row-reverse space-x-reverse space-x-10 pb-40"
+                    >
+                        {thirdRow.map((product) => (
+                            <ProductCard
+                                product={product}
+                                translate={translateX}
+                                key={product.title}
+                            />
+                        ))}
+                    </motion.div>
                 </motion.div>
             </motion.div>
         </div>
@@ -104,7 +126,7 @@ export const HeroParallax = ({
 
 export const Header = () => {
     return (
-        <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 z-30"> {/* Aumentei o z-index */}
+        <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 z-30">
             <h1 className="text-2xl md:text-7xl font-bold text-white">
                 Transformando ideias em <br />experiências digitais memoráveis
             </h1>
@@ -123,7 +145,6 @@ export const ProductCard = ({
 }: {
     product: {
         title: string;
-        link: string;
         thumbnail: string;
     };
     translate: MotionValue<number>;
@@ -136,21 +157,19 @@ export const ProductCard = ({
             whileHover={{
                 y: -20,
             }}
-            className="group/product h-96 w-[30rem] relative shrink-0"
+            className="group/product h-96 w-full max-w-[35rem] md:max-w-[24rem] sm:max-w-[18rem] relative shrink-0"
         >
-            <Link
-                href={product.link}
-                className="block group-hover/product:shadow-2xl h-full w-full relative overflow-hidden" // Adicionei overflow-hidden
-            >
+            <div className="block group-hover/product:shadow-2xl h-full w-full relative overflow-hidden">
                 <Image
                     src={product.thumbnail}
-                    fill
-                    className="object-cover object-left-top"
                     alt={product.title}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 90vw, (max-width: 768px) 50vw, 33vw"
+                    className="object-cover object-left-top"
+                    width={480}
+                    height={384}
                 />
-            </Link>
-            <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
+            </div>
+            <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none" />
             <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white z-10">
                 {product.title}
             </h2>

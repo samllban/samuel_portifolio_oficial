@@ -96,8 +96,7 @@ export default function Contato() {
     return (
         <>
             <Background>
-                <NavBar />
-                
+                <NavBar />                
                 <section className="mx-auto w-full max-w-7xl px-4 py-16 md:py-24 lg:py-32">
                     <div className="flex flex-col md:flex-row md:items-start gap-8 lg:gap-12 pt-32">
                         {/* Formulário à esquerda */}

@@ -54,7 +54,7 @@ export const FloatingNav = ({ navItems, className }: FloatingNavProps) => {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 2 }}
                         className="fixed inset-0 z-[9998] bg-black"
-                        onAnimationComplete={() => setNextPage(null)} // Reseta após animação
+                        onAnimationComplete={() => setNextPage(null)} 
                     />
                 )}
             </AnimatePresence>
@@ -71,7 +71,7 @@ export const FloatingNav = ({ navItems, className }: FloatingNavProps) => {
                 >
                     {navItems.map((navItem, idx) => (
                         <button
-                            key={`link-${idx}`}
+                            key={`link-${idx}`}   
                             onClick={() => handleNavigation(navItem.link)}
                             className={cn(
                                 "relative text-neutral-100 items-center flex space-x-1 hover:text-neutral-300 cursor-pointer",
