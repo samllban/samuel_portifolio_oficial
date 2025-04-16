@@ -5,7 +5,7 @@ import {
     useScroll,
     useTransform,
     useSpring,
-    MotionValue,
+    useMotionValue,
 } from "framer-motion";
 import Image from "next/image";
 
@@ -58,20 +58,44 @@ export const HeroParallax = ({
     const row2Ref = React.useRef<HTMLDivElement>(null);
     const row3Ref = React.useRef<HTMLDivElement>(null);
 
+    const xRow1 = useMotionValue(0);
+    const xRow2 = useMotionValue(0);
+    const xRow3 = useMotionValue(0);
+
     const [row1Width, setRow1Width] = React.useState(0);
     const [row2Width, setRow2Width] = React.useState(0);
     const [row3Width, setRow3Width] = React.useState(0);
 
     React.useEffect(() => {
-        if (row1Ref.current) {
-            setRow1Width(row1Ref.current.scrollWidth - row1Ref.current.offsetWidth);
-        }
-        if (row2Ref.current) {
-            setRow2Width(row2Ref.current.scrollWidth - row2Ref.current.offsetWidth);
-        }
-        if (row3Ref.current) {
-            setRow3Width(row3Ref.current.scrollWidth - row3Ref.current.offsetWidth);
-        }
+        const calcWidths = () => {
+            if (row1Ref.current) {
+                const scrollWidth = row1Ref.current.scrollWidth;
+                const containerWidth = row1Ref.current.offsetWidth;
+                const centerX = -((scrollWidth - containerWidth) / 2);
+                setRow1Width(scrollWidth - containerWidth);
+                xRow1.set(centerX);
+            }
+
+            if (row2Ref.current) {
+                const scrollWidth = row2Ref.current.scrollWidth;
+                const containerWidth = row2Ref.current.offsetWidth;
+                const centerX = -((scrollWidth - containerWidth) / 2);
+                setRow2Width(scrollWidth - containerWidth);
+                xRow2.set(centerX);
+            }
+
+            if (row3Ref.current) {
+                const scrollWidth = row3Ref.current.scrollWidth;
+                const containerWidth = row3Ref.current.offsetWidth;
+                const centerX = -((scrollWidth - containerWidth) / 2);
+                setRow3Width(scrollWidth - containerWidth);
+                xRow3.set(centerX);
+            }
+        };
+
+        setTimeout(calcWidths, 500);
+        window.addEventListener("resize", calcWidths);
+        return () => window.removeEventListener("resize", calcWidths);
     }, []);
 
     return (
@@ -94,15 +118,12 @@ export const HeroParallax = ({
                     <motion.div
                         ref={row1Ref}
                         drag="x"
+                        style={{ x: xRow1, translateX }}
                         dragConstraints={{ left: -row1Width, right: 0 }}
-                        className="flex flex-row-reverse space-x-reverse space-x-10 mb-10"
+                        className="flex justify-center flex-row space-x-10 mb-10"
                     >
                         {firstRow.map((product) => (
-                            <ProductCard
-                                product={product}
-                                translate={translateX}
-                                key={product.title}
-                            />
+                            <ProductCard product={product} key={product.title} />
                         ))}
                     </motion.div>
                 </motion.div>
@@ -112,15 +133,12 @@ export const HeroParallax = ({
                     <motion.div
                         ref={row2Ref}
                         drag="x"
+                        style={{ x: xRow2, translateX: translateXReverse }}
                         dragConstraints={{ left: -row2Width, right: 0 }}
-                        className="flex flex-row space-x-10 mb-10"
+                        className="flex justify-center flex-row space-x-10 mb-10"
                     >
                         {secondRow.map((product) => (
-                            <ProductCard
-                                product={product}
-                                translate={translateXReverse}
-                                key={product.title}
-                            />
+                            <ProductCard product={product} key={product.title} />
                         ))}
                     </motion.div>
                 </motion.div>
@@ -130,15 +148,12 @@ export const HeroParallax = ({
                     <motion.div
                         ref={row3Ref}
                         drag="x"
+                        style={{ x: xRow3, translateX }}
                         dragConstraints={{ left: -row3Width, right: 0 }}
-                        className="flex flex-row-reverse space-x-reverse space-x-10 pb-40"
+                        className="flex justify-center flex-row space-x-10 pb-40"
                     >
                         {thirdRow.map((product) => (
-                            <ProductCard
-                                product={product}
-                                translate={translateX}
-                                key={product.title}
-                            />
+                            <ProductCard product={product} key={product.title} />
                         ))}
                     </motion.div>
                 </motion.div>
@@ -164,19 +179,14 @@ export const Header = () => {
 
 export const ProductCard = ({
     product,
-    translate,
 }: {
     product: {
         title: string;
         thumbnail: string;
     };
-    translate: MotionValue<number>;
 }) => {
     return (
         <motion.div
-            style={{
-                x: translate,
-            }}
             whileHover={{
                 y: -20,
             }}
