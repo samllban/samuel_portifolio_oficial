@@ -73,7 +73,7 @@ export const HeroParallax = ({
                 <motion.div className="cursor-grab active:cursor-grabbing">
                     <motion.div
                         drag="x"
-                        dragConstraints={{ left: -1000, right: 0 }}
+                        dragConstraints={{ left: 0, right: 0 }}
                         className="flex flex-row-reverse space-x-reverse space-x-10 mb-10"
                     >
                         {firstRow.map((product) => (
@@ -107,7 +107,7 @@ export const HeroParallax = ({
                 <motion.div className="overflow-hidden cursor-grab active:cursor-grabbing">
                     <motion.div
                         drag="x"
-                        dragConstraints={{ left: 0, right: 0 }}
+                        dragConstraints={{ left: 0, right: -1000 }}
                         className="flex flex-row-reverse space-x-reverse space-x-10 pb-40"
                     >
                         {thirdRow.map((product) => (
