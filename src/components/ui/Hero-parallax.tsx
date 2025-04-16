@@ -20,8 +20,8 @@ export const HeroParallax = ({
     const firstRow = products.slice(0, 5);
     const secondRow = products.slice(5, 10);
     const thirdRow = products.slice(10, 15);
-    const ref = React.useRef(null);
 
+    const ref = React.useRef(null);
     const { scrollYProgress } = useScroll({
         target: ref,
         offset: ["start start", "end start"],
@@ -54,6 +54,26 @@ export const HeroParallax = ({
         springConfig
     );
 
+    const row1Ref = React.useRef<HTMLDivElement>(null);
+    const row2Ref = React.useRef<HTMLDivElement>(null);
+    const row3Ref = React.useRef<HTMLDivElement>(null);
+
+    const [row1Width, setRow1Width] = React.useState(0);
+    const [row2Width, setRow2Width] = React.useState(0);
+    const [row3Width, setRow3Width] = React.useState(0);
+
+    React.useEffect(() => {
+        if (row1Ref.current) {
+            setRow1Width(row1Ref.current.scrollWidth - row1Ref.current.offsetWidth);
+        }
+        if (row2Ref.current) {
+            setRow2Width(row2Ref.current.scrollWidth - row2Ref.current.offsetWidth);
+        }
+        if (row3Ref.current) {
+            setRow3Width(row3Ref.current.scrollWidth - row3Ref.current.offsetWidth);
+        }
+    }, []);
+
     return (
         <div
             ref={ref}
@@ -67,13 +87,14 @@ export const HeroParallax = ({
                     translateY,
                     opacity,
                 }}
-                className="relative"
+                className="relative space-y-16"
             >
                 {/* First Row */}
-                <motion.div className="cursor-grab active:cursor-grabbing">
+                <motion.div className="overflow-hidden cursor-grab active:cursor-grabbing">
                     <motion.div
+                        ref={row1Ref}
                         drag="x"
-                        dragConstraints={{ left: 0, right: 0 }}
+                        dragConstraints={{ left: -row1Width, right: 0 }}
                         className="flex flex-row-reverse space-x-reverse space-x-10 mb-10"
                     >
                         {firstRow.map((product) => (
@@ -89,8 +110,9 @@ export const HeroParallax = ({
                 {/* Second Row */}
                 <motion.div className="overflow-hidden cursor-grab active:cursor-grabbing">
                     <motion.div
+                        ref={row2Ref}
                         drag="x"
-                        dragConstraints={{ left: 0, right: 0 }}
+                        dragConstraints={{ left: -row2Width, right: 0 }}
                         className="flex flex-row space-x-10 mb-10"
                     >
                         {secondRow.map((product) => (
@@ -106,8 +128,9 @@ export const HeroParallax = ({
                 {/* Third Row */}
                 <motion.div className="overflow-hidden cursor-grab active:cursor-grabbing">
                     <motion.div
+                        ref={row3Ref}
                         drag="x"
-                        dragConstraints={{ left: 0, right: -1000 }}
+                        dragConstraints={{ left: -row3Width, right: 0 }}
                         className="flex flex-row-reverse space-x-reverse space-x-10 pb-40"
                     >
                         {thirdRow.map((product) => (
