@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { Carousel, Card } from "@/components/ui/AppleCardsCarousel";
+import { getCardContent } from "@/components/sections/AppleCardsCarousel/CardContents";
 
 export function AppleCardsCarouselDemo() {
     const cards = data.map((card, index) => (
@@ -42,6 +43,7 @@ const DummyContent = () => {
                             height="500"
                             width="500"
                             className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+                            
                         />
                     </div>
                 );
@@ -52,10 +54,10 @@ const DummyContent = () => {
 
 const data = [
     {
-        category: "Artificial Intelligence",
-        title: "You can do more with AI.",
+        category: "Inteligencia Artifical",
+        title: "Pode mudar o mundo com isso vc sabia?.",
         src: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=3556&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        content: <DummyContent />,
+        content: getCardContent("ai"),
     },
     {
         category: "Productivity",

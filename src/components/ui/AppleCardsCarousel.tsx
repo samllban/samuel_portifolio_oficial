@@ -98,7 +98,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                 >
                     <div
                         className={cn(
-                            "absolute right-0  z-[1000] h-auto  w-[5%] overflow-hidden bg-gradient-to-l"
+                            "absolute right-0 z-[1000] h-auto  w-[5%] overflow-hidden bg-gradient-to-l"
                         )}
                     ></div>
 
@@ -201,7 +201,7 @@ export const Card = ({
         <>
             <AnimatePresence>
                 {open && (
-                    <div className="fixed inset-0 h-screen z-50 overflow-auto">
+                    <div className="fixed inset-0 h-screen z-50 overflow-auto flex items-center justify-center px-4">
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -214,7 +214,7 @@ export const Card = ({
                             exit={{ opacity: 0 }}
                             ref={containerRef}
                             layoutId={layout ? `card-${card.title}` : undefined}
-                            className="max-w-5xl mx-auto bg-white dark:bg-neutral-900 h-fit  z-[60] my-10 p-4 md:p-10 rounded-3xl font-sans relative"
+                            className="w-full max-w-[90%] sm:max-w-[28rem] md:max-w-[38rem] lg:max-w-[52rem] mx-auto bg-white dark:bg-neutral-900  max-h-[70vh] sm:max-h-[85vh] overflow-y-auto  z-[60] my-6 p-4 sm:p-6 md:p-10 rounded-3xl font-sans relative"
                         >
                             <button
                                 className="sticky top-4 h-8 w-8 right-0 ml-auto bg-black dark:bg-white rounded-full flex items-center justify-center"
@@ -242,7 +242,7 @@ export const Card = ({
             <motion.button
                 layoutId={layout ? `card-${card.title}` : undefined}
                 onClick={handleOpen}
-                className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
+                className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[24rem] md:w-60 overflow-hidden flex flex-col items-start justify-start relative z-10"
             >
                 <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
                 <div className="relative z-40 p-8">
