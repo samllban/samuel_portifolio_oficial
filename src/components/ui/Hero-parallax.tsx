@@ -135,7 +135,7 @@ export const HeroParallax = ({
                 </motion.div>
 
                 {/* Second Row */}
-                <motion.div className="cursor-grab active:cursor-grabbing">
+                <motion.div className="cursor-grab">
                     <motion.div
                         ref={row2Ref}
                         drag="x"
