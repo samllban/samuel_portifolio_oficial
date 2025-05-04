@@ -140,7 +140,7 @@ export const HeroParallax = ({
                         ref={row2Ref}
                         drag="x"
                         style={{ x: xRow2, translateX: translateXReverse }}
-                        dragConstraints={{ left: -row2Width, right: 0 }}
+                        dragConstraints={{ left: 0, right: 0 }}
                         className="flex justify-center flex-row space-x-10 mb-10"
                     >
                         {secondRow.map((product) => (
