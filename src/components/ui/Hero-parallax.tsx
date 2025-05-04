@@ -9,7 +9,6 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 
-
 export const HeroParallax = ({
     products,
 }: {
@@ -115,14 +114,14 @@ export const HeroParallax = ({
                 className="relative space-y-16"
             >
                 {/* First Row */}
-                <motion.div style={{x: translateX }} className="cursor-grab active:cursor-grabbing">
+                <motion.div className="cursor-grab active:cursor-grabbing">
                     <motion.div
                         ref={row1Ref}
                         drag="x"
-                        style={{ x: xRow1 }}
+                        style={{ x: xRow1, translateX }}
                         dragConstraints={{ left: -row1Width, right: 0 }}
-                        className="flex flex-row space-x-7 mb-10 min-w-max"
-                        >
+                        className="flex justify-center flex-row space-x-10 mb-10"
+                    >
                         {firstRow.map((product) => (
                             <ProductCard product={product} key={product.title} />
                         ))}
@@ -130,14 +129,14 @@ export const HeroParallax = ({
                 </motion.div>
 
                 {/* Second Row */}
-                <motion.div style={{ translateX: translateXReverse }} className="cursor-grab active:cursor-grabbing">
+                <motion.div className="cursor-grab active:cursor-grabbing">
                     <motion.div
                         ref={row2Ref}
                         drag="x"
-                        style={{ x: xRow2 }}
+                        style={{ x: xRow2, translateX: translateXReverse }}
                         dragConstraints={{ left: -row2Width, right: 0 }}
-                        className="flex flex-row space-x-7 mb-10 min-w-max"
-                        >
+                        className="flex justify-center flex-row space-x-10 mb-10"
+                    >
                         {secondRow.map((product) => (
                             <ProductCard product={product} key={product.title} />
                         ))}
@@ -145,14 +144,14 @@ export const HeroParallax = ({
                 </motion.div>
 
                 {/* Third Row */}
-                <motion.div style={{ x:translateX }} className="overflow-hidden cursor-grab active:cursor-grabbing">
+                <motion.div className="overflow-hidden cursor-grab active:cursor-grabbing">
                     <motion.div
                         ref={row3Ref}
                         drag="x"
-                        style={{ x: xRow3 }}
+                        style={{ x: xRow3, translateX }}
                         dragConstraints={{ left: -row3Width, right: 0 }}
-                        className="flex flex-row space-x-7 mb-60  min-w-max"
-                        >
+                        className="flex justify-center flex-row space-x-10 pb-60"
+                    >
                         {thirdRow.map((product) => (
                             <ProductCard product={product} key={product.title} />
                         ))}
