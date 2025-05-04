@@ -56,7 +56,7 @@ export const products = [
     {
         title: "loja online",
         thumbnail:
-            "/img/volument.jpg",
+            "/img/eccomerce.jpg",
     },
     {
         title: "Site institucional",
