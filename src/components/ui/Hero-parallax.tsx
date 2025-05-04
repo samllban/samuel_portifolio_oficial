@@ -9,17 +9,23 @@ import {
 } from "framer-motion";
 import Image from "next/image";
 
+type Product = {
+    title: string;
+    thumbnail: string;
+};
+
 export const HeroParallax = ({
-    products,
+    products1,
+    products2,
+    products3,
 }: {
-    products: {
-        title: string;
-        thumbnail: string;
-    }[];
+    products1: Product[];
+    products2: Product[];
+    products3: Product[];
 }) => {
-    const firstRow = products.slice(0, 5);
-    const secondRow = products.slice(5, 10);
-    const thirdRow = products.slice(10, 15);
+    const firstRow = products1;
+    const secondRow = products2;
+    const thirdRow = products3;
 
     const ref = React.useRef(null);
     const { scrollYProgress } = useScroll({
@@ -129,12 +135,12 @@ export const HeroParallax = ({
                 </motion.div>
 
                 {/* Second Row */}
-                <motion.div style={{translateX: translateXReverse }}className="cursor-grab active:cursor-grabbing">
+                <motion.div className="cursor-grab active:cursor-grabbing">
                     <motion.div
                         ref={row2Ref}
                         drag="x"
-                        style={{ x: xRow2 }}
-                        dragConstraints={{ left: -row2Width, right: 1 }}
+                        style={{ x: xRow2, translateX: translateXReverse }}
+                        dragConstraints={{ left: -row2Width, right: 0 }}
                         className="flex justify-center flex-row space-x-10 mb-10"
                     >
                         {secondRow.map((product) => (
@@ -162,6 +168,7 @@ export const HeroParallax = ({
     );
 };
 
+// Header Component
 export const Header = () => {
     return (
         <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full left-0 top-0 z-30">
@@ -177,19 +184,15 @@ export const Header = () => {
     );
 };
 
+// ProductCard Component
 export const ProductCard = ({
     product,
 }: {
-    product: {
-        title: string;
-        thumbnail: string;
-    };
+    product: Product;
 }) => {
     return (
         <motion.div
-            whileHover={{
-                y: -20,
-            }}
+            whileHover={{ y: -20 }}
             className="group/product h-96 w-full max-w-[35rem] md:max-w-[24rem] sm:max-w-[18rem] relative shrink-0"
         >
             <div className="block group-hover/product:shadow-2xl h-full w-full relative overflow-hidden">
