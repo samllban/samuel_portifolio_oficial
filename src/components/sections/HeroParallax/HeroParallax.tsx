@@ -7,81 +7,81 @@ export default function HeroParallaxDemo() {
 }
 export const products = [
     {
-        title: "Moonbeam",
+        title: "loja-online",
         thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+            "/img/eccomerceEtap.jpeg",
     },
     {
-        title: "Cursor",
+        title: "loja online",
         thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+            "/img/volument.jpg",
     },
     {
-        title: "Rogue",
+        title: "landing page",
         thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/rogue.png",
-    },
-
-    {
-        title: "Editorially",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/editorially.png",
-    },
-    {
-        title: "Editrix AI",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/editrix.png",
-    },
-    {
-        title: "Pixel Perfect",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+            "/img/cripto.jpg",
     },
 
     {
-        title: "Algochurn",
+        title: "loja online",
         thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+            "/img/shooperfile.jpeg",
     },
     {
-        title: "Aceternity UI",
+        title: "loja online",
         thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+            "/img/larguilhe.jpg",
     },
     {
-        title: "Tailwind Master Kit",
+        title: "landing page",
         thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
-    },
-    {
-        title: "SmartBridge",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
-    },
-    {
-        title: "Renderwork Studio",
-        thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+            "/img/reality.jpg",
     },
 
     {
-        title: "Creme Digital",
+        title: "e-ccomerce",
         thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+            "/img/live_travel.jpg",
     },
     {
-        title: "Golden Bells Academy",
+        title: "loja online",
         thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+            "/img/create.jpg",
     },
     {
-        title: "Invoker Labs",
+        title: "landing page",
         thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+            "/img/rock.jpg",
+    },
+    {
+        title: "loja online",
+        thumbnail:
+            "/img/volument.jpg",
+    },
+    {
+        title: "Site institucional",
+        thumbnail:
+            "/img/work_better.jpg",
+    },
+
+    {
+        title: "loja online",
+        thumbnail:
+            "/img/neve.jpg",
     },
     {
         title: "E Free Invoice",
         thumbnail:
-            "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+            "/img/lup.jpeg",
+    },
+    {
+        title: "landing page",
+        thumbnail:
+            "/img/festividade.jpeg",
+    },
+    {
+        title: "landing page",
+        thumbnail:
+            "/img/moveis.jpeg",
     },
 ];

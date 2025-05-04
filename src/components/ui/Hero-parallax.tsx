@@ -101,7 +101,7 @@ export const HeroParallax = ({
     return (
         <div
             ref={ref}
-            className="min-h-[100vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+            className="min-h-[150vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
         >
             <Header />
             <motion.div
@@ -114,7 +114,7 @@ export const HeroParallax = ({
                 className="relative space-y-16"
             >
                 {/* First Row */}
-                <motion.div className="overflow-hidden cursor-grab active:cursor-grabbing">
+                <motion.div className="cursor-grab active:cursor-grabbing">
                     <motion.div
                         ref={row1Ref}
                         drag="x"
@@ -129,7 +129,7 @@ export const HeroParallax = ({
                 </motion.div>
 
                 {/* Second Row */}
-                <motion.div className="overflow-hidden cursor-grab active:cursor-grabbing">
+                <motion.div className="cursor-grab active:cursor-grabbing">
                     <motion.div
                         ref={row2Ref}
                         drag="x"
@@ -150,7 +150,7 @@ export const HeroParallax = ({
                         drag="x"
                         style={{ x: xRow3, translateX }}
                         dragConstraints={{ left: -row3Width, right: 0 }}
-                        className="flex justify-center flex-row space-x-10 pb-40"
+                        className="flex justify-center flex-row space-x-10 pb-60"
                     >
                         {thirdRow.map((product) => (
                             <ProductCard product={product} key={product.title} />
