@@ -111,7 +111,7 @@ export const HeroParallax = ({
                     translateY,
                     opacity,
                 }}
-                className="relative space-y-16"
+                className="space-y-16"
             >
                 {/* First Row */}
                 <motion.div className="cursor-grab active:cursor-grabbing">
@@ -129,12 +129,12 @@ export const HeroParallax = ({
                 </motion.div>
 
                 {/* Second Row */}
-                <motion.div className="cursor-grab active:cursor-grabbing">
+                <motion.div style={{translateX: translateXReverse }}className="cursor-grab active:cursor-grabbing">
                     <motion.div
                         ref={row2Ref}
                         drag="x"
-                        style={{ x: xRow2, translateX: translateXReverse }}
-                        dragConstraints={{ left: -row2Width, right: 0 }}
+                        style={{ x: xRow2 }}
+                        dragConstraints={{ left: -row2Width, right: 1 }}
                         className="flex justify-center flex-row space-x-10 mb-10"
                     >
                         {secondRow.map((product) => (
