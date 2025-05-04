@@ -54,7 +54,7 @@ export const FloatingNav = ({ navItems, className }: FloatingNavProps) => {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 2 }}
                         className="fixed inset-0 z-[9998] bg-black"
-                        onAnimationComplete={() => setNextPage(null)} 
+                        onAnimationComplete={() => setNextPage(null)}
                     />
                 )}
             </AnimatePresence>
@@ -66,12 +66,16 @@ export const FloatingNav = ({ navItems, className }: FloatingNavProps) => {
                     transition={{ duration: 0.2, ease: "easeInOut" }}
                     className={cn(
                         "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-white/[0.2] rounded-full bg-black shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[9999] pr-2 pl-8 py-2 items-center justify-center space-x-4",
+                        "sm:scale-100 sm:space-x-4 sm:text-sm",
+                        "max-[400px]:scale-90 max-[400px]:space-x-2 max-[400px]:text-xs max-[400px]:px-4 max-[400px]:py-1",
+                        "max-[300px]:scale-[0.75] max-[300px]:space-x-1 max-[300px]:text-[10px] max-[300px]:px-2 max-[300px]:py-1",
                         className
                     )}
+
                 >
                     {navItems.map((navItem, idx) => (
                         <button
-                            key={`link-${idx}`}   
+                            key={`link-${idx}`}
                             onClick={() => handleNavigation(navItem.link)}
                             className={cn(
                                 "relative text-neutral-100 items-center flex space-x-1 hover:text-neutral-300 cursor-pointer",

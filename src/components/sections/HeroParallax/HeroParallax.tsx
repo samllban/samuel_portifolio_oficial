@@ -14,16 +14,16 @@ export default function HeroParallaxDemo() {
 
 export const products1 = [
     {
+        title: "landing page",
+        thumbnail: "/img/cripto.jpg",
+    },
+    {
         title: "loja-online",
         thumbnail: "/img/eccomerceEtap.jpeg",
     },
     {
         title: "loja online",
         thumbnail: "/img/volument.jpg",
-    },
-    {
-        title: "landing page",
-        thumbnail: "/img/cripto.jpg",
     },
     {
         title: "loja online",
@@ -44,9 +44,10 @@ export const products2 = [
         title: "e-ccomerce",
         thumbnail: "/img/live_travel.jpg",
     },
+
     {
-        title: "loja online",
-        thumbnail: "/img/create.jpg",
+        title: "landing page",
+        thumbnail: "/img/festividade.jpeg",
     },
     {
         title: "landing page",
@@ -64,16 +65,17 @@ export const products3 = [
         thumbnail: "/img/work_better.jpg",
     },
     {
-        title: "loja online",
+        title: "site institucional",
         thumbnail: "/img/neve.jpg",
     },
     {
         title: "E Free Invoice",
         thumbnail: "/img/lup.jpeg",
     },
+
     {
-        title: "landing page",
-        thumbnail: "/img/festividade.jpeg",
+        title: "loja online",
+        thumbnail: "/img/create.jpg",
     },
     {
         title: "landing page",
