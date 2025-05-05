@@ -1,51 +1,54 @@
 import React, { JSX } from "react";
 import Image from "next/image";
-//import Link from "next/link"; // ⬅️ Import necessário
+import Link from "next/link"; // ⬅️ Import necessário
 
 const commonStyles = "bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4";
 const imageUrl = "https://assets.aceternity.com/macbook.png";
 
 export const getCardContent = (type: string) => {
-    const Button = () => (
+    const Button = ({ href = "/" }: { href?: string }) => (
         <div className="text-center mt-10">
-            <button
-                className="relative inline-block px-8 py-3 font-semibold text-white transition duration-300 ease-in-out bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-pink-300"
-            >
-                <span className="absolute inset-0 rounded-lg opacity-30 bg-gradient-to-r from-white to-transparent blur-sm"></span>
-                <span className="relative z-10">Saiba mais</span>
-            </button>
+            <Link href={href}>
+                <button
+                    className="relative inline-block px-8 py-3 font-semibold text-white transition duration-300 ease-in-out bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-lg shadow-lg hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-pink-300"
+                >
+                    <span className="absolute inset-0 rounded-lg opacity-30 bg-gradient-to-r from-white to-transparent blur-sm"></span>
+                    <span className="relative z-10">Saiba mais</span>
+                </button>
+            </Link>
         </div>
     );
+
 
     const contents: Record<string, JSX.Element> = {
         ai: (
             <div className={commonStyles}>
                 <p className="text-neutral-300 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-                    <span className="font-bold text-neutral-100">IA:</span>
-                    Descubra como a inteligência artificial pode transformar empresas, automatizar decisões e impulsionar criatividade com algoritmos avançados.
+                    <span className="font-bold text-neutral-100">Games:</span>
+                    Site construido com a melhores praticas de design. Focado em atender demandas de vendas de jogos online.
                 </p>
                 <Image src={imageUrl} alt="AI" height={500} width={500} className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain" />
-                <Button />
+                <Button href="https://mykdgames.netlify.app/"/>
             </div>
         ),
         productivity: (
             <div className={commonStyles}>
                 <p className="text-neutral-300 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-                    <span className="font-bold text-neutral-100">Produtividade:</span>
-                    Maximize seu tempo com ferramentas digitais otimizadas para equipes modernas. Automatize tarefas repetitivas e foque no que realmente importa.
+                    <span className="font-bold text-neutral-100">Vendas:</span>
+                    Site construido com o intuido de prospectar clientes para vendas de infoprodutos. Todo construido manualmente como html, css e js.
                 </p>
                 <Image src={imageUrl} alt="Produtivity" height={500} width={500} className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain" />
-                <Button />
+                <Button href="https://vendasonlineassis.netlify.app/"/>
             </div>
         ),
         product: (
             <div className={commonStyles}>
                 <p className="text-neutral-300 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-                    <span className="font-bold text-neutral-100">Produto:</span>
-                    Veja como nossos produtos digitais elevam a experiência do usuário com design intuitivo, performance impecável e tecnologia de ponta.
+                    <span className="font-bold text-neutral-100">Institucional:</span>
+                    Site feito para uma proficional da área da saúde mental, focado em apresentar pontos do chave do seu trabanho e uma forma de estar presente de forma online.
                 </p>
                 <Image src={imageUrl} alt="Product" height={500} width={500} className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain" />
-                <Button />
+                <Button href="https://mayarapsi.netlify.app/"/>
             </div>
         ),
         dashbord: (
