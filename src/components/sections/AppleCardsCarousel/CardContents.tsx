@@ -2,7 +2,7 @@ import React, { JSX } from "react";
 import Image from "next/image";
 import Link from "next/link"; // ⬅️ Import necessário
 
-const commonStyles = "bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4";
+const commonStyles = " dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4";
 const imageUrl = "https://assets.aceternity.com/macbook.png";
 
 export const getCardContent = (type: string) => {
