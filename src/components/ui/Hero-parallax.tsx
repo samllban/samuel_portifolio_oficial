@@ -128,8 +128,8 @@ export const HeroParallax = ({
                         dragConstraints={{ left: -row1Width, right: 0 }}
                         className="flex justify-center flex-row space-x-10 mb-10"
                     >
-                        {firstRow.map((product) => (
-                            <ProductCard product={product} key={product.title} />
+                        {firstRow.map((product, index) => (
+                            <ProductCard product={product} key={`${product.title}-${index}`} />
                         ))}
                     </motion.div>
                 </motion.div>
@@ -143,8 +143,8 @@ export const HeroParallax = ({
                         dragConstraints={{ left: 0, right: row2Width }}
                         className="flex justify-center flex-row space-x-10 mb-10"
                     >
-                        {secondRow.map((product) => (
-                            <ProductCard product={product} key={product.title} />
+                        {secondRow.map((product, index) => (
+                            <ProductCard product={product} key={`${product.title}-${index}`}/>
                         ))}
                     </motion.div>
                 </motion.div>
@@ -158,8 +158,8 @@ export const HeroParallax = ({
                         dragConstraints={{ left: -row3Width, right: 0 }}
                         className="flex justify-center flex-row space-x-10 pb-60"
                     >
-                        {thirdRow.map((product) => (
-                            <ProductCard product={product} key={product.title} />
+                        {thirdRow.map((product, index) => (
+                            <ProductCard product={product} key={`${product.title}-${index}`} />
                         ))}
                     </motion.div>
                 </motion.div>
