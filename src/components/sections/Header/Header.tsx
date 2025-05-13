@@ -67,7 +67,7 @@ export default function Header() {
                         className="mx-auto w-60 block"
                     >
                         <button className="transform rounded-lg bg-white px-6 py-3 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-white-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 tracking-normal">
-                            Vamos Conversar!
+                            Vamos conversar!
                         </button>
                     </Link>
                 </div>

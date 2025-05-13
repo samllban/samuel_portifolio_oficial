@@ -11,6 +11,7 @@ import Background from "@/components/Background/Background";
 import { AppleCardsCarouselDemo } from "@/components/sections/AppleCardsCarousel/AppleCardsCarousel";
 import Preloader from "@/components/Preloader/Preloader";
 import { useLoading } from "@/context/LoadingContext";
+//import TimelinePage from "@/components/sections/TimelinePage/TimelinePage";
 
 
 export default function Home() {

@@ -32,18 +32,18 @@ export default function SobrePage() {
                         {/* Text column */}
                         <div className="lg:w-1/2 space-y-8">
                             <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
-                                Olá, eu sou <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Samuel Bandeira</span>
+                                Olá, eu sou <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Samuel Bandeira.</span>
                             </h2>
 
                             <div className="space-y-6">
                                 <p className="text-lg text-gray-300 leading-relaxed">
-                                    Sou um <span className="font-semibold text-white">Web Designer</span> e <span className="font-semibold text-white">Desenvolvedor de Software</span> especializado em criar experiências digitais impactantes que destacam produtos e marcas.
+                                    Sou um <span className="font-semibold text-white">Web Designer</span> e <span className="font-semibold text-white">Desenvolvedor de Software,</span> especializado em criar experiências digitais impactantes que destacam produtos e marcas.
                                 </p>
                                 <p className="text-lg text-gray-300 leading-relaxed">
-                                    Com mais de 2 anos de experiência, ajudo empresas a fortalecer sua presença online através de soluções web modernas, performáticas e visualmente impressionantes.
+                                    Com mais de 2 anos de experiência, ajudo empresas a fortalecer sua presença online por meio de soluções web modernas, performáticas e visualmente impressionantes.
                                 </p>
                                 <p className="text-lg text-gray-300 leading-relaxed">
-                                    Atualmente cursando <span className="font-semibold text-white">Ciência da Computação</span> e <span className="font-semibold text-white">Análise e Desenvolvimento de Sistemas</span>, estou constantemente expandindo meu conhecimento para oferecer as melhores soluções tecnológicas.
+                                    Atualmente cursando <span className="font-semibold text-white">Ciência da Computação</span> e <span className="font-semibold text-white">Análise e Desenvolvimento de Sistemas</span>, estou constantemente expandindo meus conhecimentos para oferecer as melhores soluções tecnológicas.
                                 </p>
                             </div>
 
@@ -76,7 +76,7 @@ export default function SobrePage() {
                                 Minhas <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Habilidades</span>
                             </h3>
                             <p className="text-lg text-gray-300 leading-relaxed">
-                                Domino diversas tecnologias modernas para criação de sistemas web completos, incluindo <span className="font-semibold text-white">HTML5</span>, <span className="font-semibold text-white">CSS</span>, <span className="font-semibold text-white">JavaScript</span>, <span className="font-semibold text-white">React</span>, <span className="font-semibold text-white">Node.js</span> e <span className="font-semibold text-white">Figma</span>.
+                                Domino diversas tecnologias modernas para a criação de sistemas web completos, incluindo <span className="font-semibold text-white">HTML5</span>, <span className="font-semibold text-white">CSS</span>, <span className="font-semibold text-white">JavaScript</span>, <span className="font-semibold text-white">React</span>, <span className="font-semibold text-white">Node.js</span> e <span className="font-semibold text-white">Figma</span>.
                             </p>
                             <p className="text-lg text-gray-300 leading-relaxed mt-4">
                                 Minha abordagem combina design impactante com desenvolvimento robusto, garantindo soluções que não apenas impressionam visualmente, mas também oferecem performance excepcional e experiência de usuário impecável.

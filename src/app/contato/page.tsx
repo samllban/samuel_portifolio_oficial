@@ -135,7 +135,7 @@ export default function Contato() {
                                                 id="whatsapp"
                                                 label="Número de WhatsApp"
                                                 type="tel"
-                                                placeholder="(88) 9 9999999"
+                                                placeholder="(88) 9 9999-9999"
                                                 value={formData.whatsapp}
                                                 onChange={handleChange}
                                             />
@@ -148,7 +148,7 @@ export default function Contato() {
                                                     id="mensagem"
                                                     name="mensagem"
                                                     rows={5}
-                                                    placeholder="Informe aqui, em detalhes os objetivos com o seu site"
+                                                    placeholder="Informe aqui, em detalhes, os objetivos com o seu site"
                                                     required
                                                     value={formData.mensagem}
                                                     onChange={handleChange}

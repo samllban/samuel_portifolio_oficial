@@ -27,7 +27,7 @@ const data = [
         content: getCardContent("ai"),
     },
     {
-        category: "Pagina de Vendas",
+        category: "Página de Vendas",
         title: "",
         src: "/img/pagina.jpeg",
         content: getCardContent("productivity"),

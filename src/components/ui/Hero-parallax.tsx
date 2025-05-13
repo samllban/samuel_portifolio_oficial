@@ -176,7 +176,7 @@ export const Header = () => {
                 Transformando ideias em <br />experiências digitais memoráveis
             </h1>
             <p className="max-w-2xl text-base md:text-xl mt-8 text-gray-200">
-                Construo websites e interfaces que não apenas impressionam visualmente,
+                Construo websites e interfaces, que não apenas impressionam visualmente,
                 mas também entregam resultados. Cada projeto é desenvolvido
                 com as melhores práticas de UI/UX, performance e tecnologia moderna.
             </p>

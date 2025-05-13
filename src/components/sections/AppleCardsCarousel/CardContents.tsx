@@ -24,31 +24,31 @@ export const getCardContent = (type: string) => {
         ai: (
             <div className={commonStyles}>
                 <p className="text-neutral-300 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-                    <span className="font-bold text-neutral-100">Games:</span>
-                    Site construido com a melhores praticas de design. Focado em atender demandas de vendas de jogos online.
+                    <span className="font-bold text-neutral-100">Games: </span>
+                    Plataforma desenvolvida com as melhores práticas de design, pensada para maximizar vendas de jogos online com desempenho, estética e usabilidade de alto nível.
+
                 </p>
                 <Image src={imageUrl} alt="AI" height={500} width={500} className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain" />
-                <Button href="https://mykdgames.netlify.app/"/>
+                <Button href="https://mykdgames.netlify.app/" />
             </div>
         ),
         productivity: (
             <div className={commonStyles}>
                 <p className="text-neutral-300 text-base md:text-2xl font-sans max-w-3xl mx-auto">
                     <span className="font-bold text-neutral-100">Vendas:</span>
-                    Site construido com o intuido de prospectar clientes para vendas de infoprodutos. Todo construido manualmente como html, css e js.
+                    Site construído com o intuido de prospectar clientes para vendas de infoprodutos. Todo construido manualmente como html, css e js.
                 </p>
                 <Image src={imageUrl} alt="Produtivity" height={500} width={500} className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain" />
-                <Button href="https://vendasonlineassis.netlify.app/"/>
+                <Button href="https://vendasonlineassis.netlify.app/" />
             </div>
         ),
         product: (
             <div className={commonStyles}>
                 <p className="text-neutral-300 text-base md:text-2xl font-sans max-w-3xl mx-auto">
                     <span className="font-bold text-neutral-100">Institucional:</span>
-                    Site feito para uma proficional da área da saúde mental, focado em apresentar pontos do chave do seu trabanho e uma forma de estar presente de forma online.
-                </p>
+                    Site desenvolvido para uma profissional da área da saúde mental, com foco em destacar os principais aspectos do seu trabalho e fortalecer sua presença online.                </p>
                 <Image src={imageUrl} alt="Product" height={500} width={500} className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain" />
-                <Button href="https://mayarapsi.netlify.app/"/>
+                <Button href="https://mayarapsi.netlify.app/" />
             </div>
         ),
         dashbord: (
