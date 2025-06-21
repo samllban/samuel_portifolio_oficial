@@ -23,19 +23,19 @@ const data = [
     {
         category: "Loja de jogos",
         title: "",
-        src: "/img/jogos.jpeg",
+        src: "/img/jogos.webp",
         content: getCardContent("ai"),
     },
     {
         category: "Página de Vendas",
         title: "",
-        src: "/img/pagina.jpeg",
+        src: "/img/pagina.webp",
         content: getCardContent("productivity"),
     },
     {
         category: "Site Institucional",
         title: "",
-        src: "/img/psico.jpeg",
+        src: "/img/psico.webp",
         content: getCardContent("product"),
     },
 ];
