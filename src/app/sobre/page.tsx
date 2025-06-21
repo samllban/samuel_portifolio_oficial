@@ -56,7 +56,7 @@ export default function SobrePage() {
                         <div className="lg:w-1/2 flex justify-center">
                             <div className="relative group">
                                 <Image
-                                    src="/img/samuel.jpg"// Caminho relativo à pasta public
+                                    src="/img/samuel.webp"// Caminho relativo à pasta public
                                     alt="Samuel Bandeira"
                                     width={500}  // Largura em pixels
                                     height={500} // Altura em pixels

@@ -15,70 +15,70 @@ export default function HeroParallaxDemo() {
 export const products1 = [
     {
         title: "landing page",
-        thumbnail: "/img/cripto.jpg",
+        thumbnail: "/img/cripto.webp",
     },
     {
         title: "loja-online",
-        thumbnail: "/img/eccomerceEtap.jpeg",
+        thumbnail: "/img/eccomerceEtap.webp",
     },
     {
         title: "loja online",
-        thumbnail: "/img/volument.jpg",
+        thumbnail: "/img/volument.webp",
     },
     {
         title: "loja online",
-        thumbnail: "/img/shooperfile.jpeg",
+        thumbnail: "/img/shooperfile.webp",
     },
     {
         title: "loja online",
-        thumbnail: "/img/larguilhe.jpg",
+        thumbnail: "/img/larguilhe.webp",
     },
 ];
 
 export const products2 = [
     {
         title: "landing page",
-        thumbnail: "/img/reality.jpg",
+        thumbnail: "/img/reality.webp",
     },
     {
         title: "e-ccomerce",
-        thumbnail: "/img/live_travel.jpg",
+        thumbnail: "/img/live_travel.webp",
     },
 
     {
         title: "landing page",
-        thumbnail: "/img/festividade.jpeg",
+        thumbnail: "/img/festividade.webp",
     },
     {
         title: "landing page",
-        thumbnail: "/img/rock.jpg",
+        thumbnail: "/img/rock.webp",
     },
     {
         title: "loja online",
-        thumbnail: "/img/eccomerce.jpg",
+        thumbnail: "/img/eccomerce.webp",
     },
 ];
 
 export const products3 = [
     {
         title: "Site institucional",
-        thumbnail: "/img/work_better.jpg",
+        thumbnail: "/img/work_better.webp",
     },
     {
         title: "site institucional",
-        thumbnail: "/img/neve.jpg",
+        thumbnail: "/img/neve.webp",
     },
     {
         title: "E Free Invoice",
-        thumbnail: "/img/lup.jpeg",
+        thumbnail: "/img/lup.webp",
     },
 
     {
         title: "loja online",
-        thumbnail: "/img/create.jpg",
+        thumbnail: "/img/create.webp",
     },
     {
         title: "landing page",
-        thumbnail: "/img/moveis.jpeg",
+        thumbnail: "/img/moveis.web",
     },
 ];
