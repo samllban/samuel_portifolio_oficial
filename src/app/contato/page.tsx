@@ -5,7 +5,7 @@ import { FaEnvelope, FaWhatsapp } from 'react-icons/fa'
 import Background from '@/components/Background/Background'
 import NavBar from '@/components/navigation/NavBar'
 import Footer from '@/components/sections/Footer/Footer'
-import { db, ref, set } from '@/lib/firebase'
+import { getFirebaseDb, ref, set } from '@/lib/firebase'
 import { GlowingEffect } from '@/components/ui/Glowing-effect'
 
 interface FormFieldProps {
@@ -77,7 +77,8 @@ export default function Contato() {
         }
 
         try {
-            const formRef = ref(db, 'formulario/' + Date.now())
+            const db = getFirebaseDb();
+            const formRef = ref(db, 'formulario/' + Date.now());
             await set(formRef, dadosFormulario)
             alert('Mensagem enviada com sucesso!')
             setFormData({

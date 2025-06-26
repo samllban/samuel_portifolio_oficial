@@ -1,16 +1,20 @@
 "use client"
 
-import Header from "@/components/sections/Header/Header";
+import dynamic from 'next/dynamic'
 import { cn } from "@/lib/utils";
 import { Spotlight } from "../components/ui/Spotlight";
-import ScrollTec from "@/components/sections/ScrollTec/ScrollTec";
-import Footer from "@/components/sections/Footer/Footer";
-import HeroParallaxDemo from "@/components/sections/HeroParallax/HeroParallax";
-import NavBar from "@/components/navigation/NavBar";
-import Background from "@/components/Background/Background";
-import { AppleCardsCarouselDemo } from "@/components/sections/AppleCardsCarousel/AppleCardsCarousel";
-import Preloader from "@/components/Preloader/Preloader";
 import { useLoading } from "@/context/LoadingContext";
+
+// Importação dinâmica dos componentes pesados
+const Header = dynamic(() => import("@/components/sections/Header/Header"));
+const ScrollTec = dynamic(() => import("@/components/sections/ScrollTec/ScrollTec"));
+const Footer = dynamic(() => import("@/components/sections/Footer/Footer"));
+const HeroParallaxDemo = dynamic(() => import("@/components/sections/HeroParallax/HeroParallax"));
+const NavBar = dynamic(() => import("@/components/navigation/NavBar"));
+const Background = dynamic(() => import("@/components/Background/Background"));
+//const AppleCardsCarouselDemo = dynamic(() => import("@/components/sections/AppleCardsCarousel/AppleCardsCarousel"));
+const Preloader = dynamic(() => import("@/components/Preloader/Preloader"));
+import { AppleCardsCarouselDemo } from "@/components/sections/AppleCardsCarousel/AppleCardsCarousel";
 //import TimelinePage from "@/components/sections/TimelinePage/TimelinePage";
 
 
